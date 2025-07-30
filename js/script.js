@@ -1,4 +1,3 @@
-
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('Wylosowana liczba to: ' + randomNumber);
 
@@ -33,6 +32,8 @@ function displayResult(argComputerMove, argPlayerMove){
     (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') ||
     (argComputerMove == 'papier' && argPlayerMove == 'kamien')){
     printMessage('Ty wygrywasz!');
+  } else if (argComputerMove == argPlayerMove) {
+    printMessage('Remis!');
   } else {
     printMessage('Tym razem przegrywasz :(');
   }
